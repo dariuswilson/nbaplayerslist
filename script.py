@@ -1,9 +1,12 @@
 import requests
 import json
-# Just a note this is a copy of script.py. You can delete this - Anthony
+
+with open('config.json') as config_file:
+    config = json.load(config_file)
+
 url = 'https://free-nba.p.rapidapi.com/players'
-headers = {'X-RapidAPI-Host': 'free-nba.p.rapidapi.com', 
-'X-RapidAPI-Key': 'e320249532msh7750025bd5bc982p1f34dfjsn72ab6703eb9e'}
+headers = {'X-RapidAPI-Host': config['X-RapidAPI-Host'], 
+'X-RapidAPI-Key': config['X-RapidAPI-Key']}
 
 r = requests.get(url, headers=headers)
 # print(r.json())
