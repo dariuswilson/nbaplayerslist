@@ -1,5 +1,6 @@
 import requests
-
+import json
+# Just a note this is a copy of script.py. You can delete this - Anthony
 url = 'https://free-nba.p.rapidapi.com/players'
 headers = {'X-RapidAPI-Host': 'free-nba.p.rapidapi.com', 
 'X-RapidAPI-Key': 'e320249532msh7750025bd5bc982p1f34dfjsn72ab6703eb9e'}
@@ -19,8 +20,23 @@ for player in players:
 		player_list = team_player_dict[team_name]
 	else: 
 		player_list = []
-	player_list.append(player_full_name) 
+	player_list.append(player_full_name)
 	team_player_dict[team_name] = player_list 
-test = str(team_player_dict)
-print(eval(test))
+print(json.dumps(team_player_dict, indent=4))
 
+# player_list = ["Marshon Brooks", "Omri Casspi"]
+# team_player_dict = {"Indiana Pacers": ["Ike Ani"], "New York Knicks": ["Ron Baker"], "Memphis Grizzlies": ["Marshon Brooks", "Omri Casspi"]}
+
+# s = {
+# 	"Data": [{
+# 		"Name": 'Darius',
+# 		"Email": 'dariuswilsonxu@gmail.com'
+# 	},
+# 	{
+# 		"Name": 'Matt',
+# 		"Email": 'mattly@gmail.com'
+# 	}],
+# 	"Meta": 2
+# }
+# print(s["Data"][0]["Name"])
+# # print(s)
