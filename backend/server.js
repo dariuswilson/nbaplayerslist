@@ -4,8 +4,8 @@ const app = express()
 const port = 4000
 
 
-app.get('/teams', (req, res) => { // http://localhost:5000/teams
-  fs.readFile('/Users/16303/Desktop/Projects/Project1/team_player.json', 'utf8', (err, data) => {
+app.get('/teams', (req, res) => { // http://localhost:4000/teams
+  fs.readFile('/Users/16303/Desktop/Projects/Project1/backend/team_player.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       return;
