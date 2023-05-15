@@ -1,10 +1,10 @@
 const express = require('express')
 const fs = require('fs')
 const app = express()
-const port = 3000
+const port = 4000
 
 
-app.get('/teams', (req, res) => { // http://localhost:3000/teams
+app.get('/teams', (req, res) => { // http://localhost:5000/teams
   fs.readFile('/Users/16303/Desktop/Projects/Project1/team_player.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err);
@@ -16,7 +16,7 @@ app.get('/teams', (req, res) => { // http://localhost:3000/teams
   });
 })
 
-app.get('/dog', (req, res) => { // http://localhost:3000/dog
+app.get('/dog', (req, res) => { // http://localhost:5000/dog
     res.send('Woof!')
   })
 
