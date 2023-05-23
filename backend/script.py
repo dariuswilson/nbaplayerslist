@@ -9,7 +9,7 @@ headers = {'X-RapidAPI-Host': config['X-RapidAPI-Host'],
 'X-RapidAPI-Key': config['X-RapidAPI-Key']}
 
 r = requests.get(url, headers=headers)
-# print(r.json())
+print(r.json())
 players = r.json()['data']
 # meta = r.json()['meta']
 team_player_dict = {}
@@ -26,20 +26,3 @@ for player in players:
 	player_list.append(player_full_name)
 	team_player_dict[team_name] = player_list 
 print(json.dumps(team_player_dict, indent=4))
-
-# player_list = ["Marshon Brooks", "Omri Casspi"]
-# team_player_dict = {"Indiana Pacers": ["Ike Ani"], "New York Knicks": ["Ron Baker"], "Memphis Grizzlies": ["Marshon Brooks", "Omri Casspi"]}
-
-# s = {
-# 	"Data": [{
-# 		"Name": 'Darius',
-# 		"Email": 'dariuswilsonxu@gmail.com'
-# 	},
-# 	{
-# 		"Name": 'Matt',
-# 		"Email": 'mattly@gmail.com'
-# 	}],
-# 	"Meta": 2
-# }
-# print(s["Data"][0]["Name"])
-# # print(s)
