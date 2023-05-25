@@ -1,7 +1,12 @@
 import React from "react";
 
 const Header = () => {
-  return <h1>NBA Teams</h1>;
+  return (
+    <div>
+      <h1>NBA Player List</h1>
+      <p>Select a NBA Team to see their roster.</p>
+    </div>
+  );
 };
 
 export default Header;

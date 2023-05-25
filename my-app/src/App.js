@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Dropdown from "./components/Dropdown";
 import PlayerList from "./components/PlayerList";
+import "./App.css";
 
 function App() {
   const [teams, setTeams] = useState({});
@@ -20,7 +21,7 @@ function App() {
       .catch((error) => {
         console.error("Error fetching teams:", error);
       });
-  }, []);
+  }, [teams]);
 
   const handleTeamChange = (event) => {
     setSelectedTeam(event.target.value);

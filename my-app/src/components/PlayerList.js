@@ -5,7 +5,7 @@ const PlayerList = ({ selectedTeam, players }) => {
     <>
       {selectedTeam && (
         <div>
-          <h2>{selectedTeam} Players</h2>
+          <h2>{selectedTeam} Players:</h2>
           <ul>
             {players.map((player) => (
               <li key={player}>{player}</li>
