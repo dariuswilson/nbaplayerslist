@@ -9,7 +9,7 @@ app.use(cors());
 app.get("/teams", (req, res) => {
   // http://localhost:4000/teams
   fs.readFile(
-    "/Users/16303/Desktop/Projects/Project1/backend/team_player.json",
+    "/Users/16303/Desktop/Projects/NBAPlayerList/backend/team_player.json",
     "utf8",
     (err, data) => {
       if (err) {
