@@ -21,7 +21,7 @@ function App() {
       .catch((error) => {
         console.error("Error fetching teams:", error);
       });
-  }, [teams]);
+  });
 
   const handleTeamChange = (event) => {
     setSelectedTeam(event.target.value);
